@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AIMoveCommand : AICommand
 {
-    Vector3 targetPosition;
+    public Vector3 targetPosition {get;}
     GameObject owner;
     float speed = 1f;
 

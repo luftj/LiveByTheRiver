@@ -21,4 +21,13 @@ public class AIComponent : MonoBehaviour
     {
 
     }
+
+    private void OnDrawGizmosSelected() 
+    {
+        if(currentCommand is AIMoveCommand)
+        {
+            Gizmos.DrawSphere((currentCommand as AIMoveCommand).targetPosition,0.3f);
+            Gizmos.DrawLine(this.transform.position,(currentCommand as AIMoveCommand).targetPosition);
+        }
+    }
 }
